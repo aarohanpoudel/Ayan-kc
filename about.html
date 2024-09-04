@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ayan Kc's Professional Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-size: 300% 300%;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            animation: backgroundShift 15s ease infinite;
+        }
+
+        @keyframes backgroundShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background: #f64f59;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        main {
+            padding: 6rem 2rem;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        section#about {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeInUp 1.5s ease;
+            margin-bottom: 2rem;
+        }
+
+        section#about h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        section#about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills, .achievements, .values {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill, .achievement, .value {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .skill:hover, .achievement:hover, .value:hover {
+            transform: scale(1.05);
+        }
+
+        .bio {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        .bio h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <p>I'm Ayan Kc, a professional boxer with a passion for pushing my limits both inside and outside the ring. My journey in boxing is driven by dedication, discipline, and the relentless pursuit of excellence. I strive not only to excel in my sport but also to inspire others through my actions and commitment to my craft.</p>
+            <div class="skills">
+                <div class="skill">Professional Boxing</div>
+                <div class="skill">Discipline & Dedication</div>
+                <div class="skill">Fitness Training</div>
+                <div class="skill">Community Engagement</div>
+                <div class="skill">Mentoring Youth</div>
+                <div class="skill">Strategic Planning</div>
+            </div>
+        </section>
+
+        <section class="bio">
+            <h2>My Journey</h2>
+            <p>From humble beginnings, I discovered boxing as an outlet for my energy and a channel for my competitive spirit. Over the years, I've trained under some of the best coaches, fought in various tournaments, and faced numerous challenges that have shaped who I am today. My journey is not just about winning titles, but about personal growth, resilience, and the constant pursuit of self-improvement.</p>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <div class="achievements">
+                <div class="achievement">National Boxing Champion 2022</div>
+                <div class="achievement">Silver Medalist at the International Boxing Cup 2021</div>
+                <div class="achievement">Awarded Best Boxer of the Year 2020</div>
+                <div class="achievement">Represented Country in the Global Championships 2019</div>
+                <div class="achievement">Trainer and Mentor for Upcoming Boxers</div>
+            </div>
+        </section>
+
+        <section id="values">
+            <h2>Philosophy & Values</h2>
+            <div class="values">
+                <div class="value">
+                    <strong>Integrity:</strong> I believe in upholding the highest standards of honesty and strong moral principles, both in and out of the ring.
+                </div>
+                <div class="value">
+                    <strong>Resilience:</strong> Life's challenges are opportunities to grow. I embrace setbacks as lessons that fuel my drive to improve.
+                </div>
+                <div class="value">
+                    <strong>Perseverance:</strong> Success is not just about talent; it's about the relentless pursuit of your goals, even when the going gets tough.
+                </div>
+                <div class="value">
+                    <strong>Inspiration:</strong> My goal is to inspire others, especially the younger generation, to dream big and work hard to achieve their dreams.
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ayan Kc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
